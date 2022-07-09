@@ -1,7 +1,8 @@
 terraform {  
   required_providers {    
     aws = {     
-      source  = "hashicorp/aws"     
+      source  = "hashicorp/aws"  
+      version = ">= 1.2.0, < 2.0.0"
        
     }  
   }
@@ -11,7 +12,7 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-  version = "~> 3.0" 
+   
 }
 
 # creating VPC
