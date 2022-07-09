@@ -28,7 +28,7 @@ resource "aws_vpc" "MyLab-VPC" {
 
 resource "aws_subnet" "MyLab-Public-Subnet" {
     vpc_id = aws_vpc.MyLab-VPC.id
-    cidr_block = "172.20.10.0/16"
+    cidr_block = "172.20.10.0/24"
 
     tags = {
       Name = "MyLab-Public-Subnet"
