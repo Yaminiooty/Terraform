@@ -103,7 +103,7 @@ resource "aws_route_table_association" "MyLab-association" {
  resource "aws_instance" "MyLab-instance" {
      ami = "ami-02d1e544b84bf7502"
      instance_type = "t2.micro"
-     key_name = SAI NEW
+     key_name = "SAIRAMA"
      vpc_security_group_ids = [aws_security_group.MyLab-SG.id]
      subnet_id = aws_subnet.MyLab-Public-Subnet.id
      associate_public_ip_address = true
