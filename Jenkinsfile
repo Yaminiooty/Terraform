@@ -3,18 +3,13 @@ pipeline {
     tools {
        terraform 'terraform'
     }
-    stages {
-        
-         stage('Access') {
-            environment { 
+    environment { 
                 AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID') 
                 AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-                steps{
-                    echo "success"
-                }
-                
-            }
-        }
+    }
+    stages {
+        
+         
          stage('terraform format check') {
             steps{
                 sh 'terraform fmt'
