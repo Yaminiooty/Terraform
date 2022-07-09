@@ -5,6 +5,11 @@ pipeline {
     }
     stages {
         
+         stage('Access') {
+            environment { 
+                Secret_key = credentials('secret-text') 
+            }
+        }
         
         stage('terraform Init') {
             steps{
